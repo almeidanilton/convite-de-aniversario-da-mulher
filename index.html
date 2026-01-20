@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Convite de Aniversário da Beatriz</title>
+    <link rel="stylesheet" href="style.css">
+</head><body>
+    <main class="card">
+        <header>
+            <h1>Convite para o Aniversário da Beatriz</h1>
+            <p>Você está convidados para a minha festa de aniversário! 🎉</p>
+        </header>
+
+        <section class="details">
+            <h2>Detalhes da Festa</h2>
+            <ul>
+                <li><strong>Data:</strong> 31 de Janeiro de 2026 (Sábado)</li>
+                <li><strong>Hora:</strong> 14h</li>
+                <li><strong>Local:</strong> <a href="https://www.google.com/maps/search/?api=1&query=Rua+Azevedo+Soares+449+Tatuape" target="_blank">Rua Azevedo Soares 449, Tatuapé</a></li>
+                <li><strong>Entrada:</strong> R$ 20,00 (taxa do local)</li>
+                <li><strong>Bebida:</strong> O consumo de bebidas é individual!</li>
+                <li><strong>Para Crianças:</strong> O local conta com uma área kids para a diversão dos pequenos!</li>
+            </ul>
+        </section>
+
+        <section id="countdown-section">
+            <h2>Contagem Regressiva</h2>
+            <div id="countdown">
+                <p>A festa começa em:</p>
+                <span id="timer"></span>
+            </div>
+        </section>
+
+        <section class="message">
+            <p>Espero você lá para comemorarmos juntos!</p>
+            <p>Conto com a sua presença, família e amigos.</p>
+        </section>
+
+        <footer>
+            <p>
+            </p>
+        </footer>
+    </main>
+
+    <script>
+        // Define a data da festa (ano, mês (0-11), dia, hora, minuto, segundo)
+        const partyDate = new Date(2026, 0, 31, 14, 0, 0).getTime();
+
+        const timer = setInterval(function() {
+            const now = new Date().getTime();
+            const distance = partyDate - now;
+
+            // Cálculos de tempo
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            // Exibe o resultado no elemento com id="timer"
+            document.getElementById("timer").innerHTML = days + "d " + hours + "h "
+            + minutes + "m " + seconds + "s ";
+
+            // Se a contagem terminar, exibe uma mensagem
+            if (distance < 0) {
+                clearInterval(timer);
+                document.getElementById("countdown-section").innerHTML = "<h2>A festa já começou!</h2>";
+            }
+        }, 1000);
+    </script>
+</body>
+</html>

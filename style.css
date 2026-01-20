@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Pacifico&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background: #ff00ee;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.card {
+    background: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    width: 100%;
+    text-align: center;
+    padding: 30px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+header h1 {
+    font-family: 'Pacifico', cursive;
+    color: #000000;
+    font-size: 2.5em;
+    margin: 0 0 10px;
+}
+
+header p {
+    font-size: 1.2em;
+    color: #555;
+}
+
+.details ul {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+    display: inline-block;
+    text-align: left;
+}
+
+.details li {
+    font-size: 1.1em;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: flex-start;
+}
+
+.details li strong {
+    margin-right: 8px;
+    flex-shrink: 0;
+}
+
+.details a {
+    color: #000000;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.details a:hover {
+    color: #000000;
+}
+
+#countdown-section {
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px 0;
+}
+
+#countdown-section h2 {
+    margin-top: 0;
+    color: #000000;
+}
+
+#timer {
+    font-size: 1.8em;
+    font-weight: 700;
+    color: #333;
+}
+
+.message img {
+    border-radius: 10px;
+    margin-top: 15px;
+    max-width: 100%;
+    height: auto;
+}
+
+.message p {
+    font-size: 1.1em;
+    line-height: 1.6;
+}
+
+footer {
+    margin-top: 30px;
+    font-size: 0.9em;
+    color: #777;
+}
